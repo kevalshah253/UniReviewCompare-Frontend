@@ -12,6 +12,7 @@ const App = () => {
                 
                 <Routes>
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/home" element={<HomePage />} />
                     {/* Add routes for other pages */}
                 </Routes>
             </BrowserRouter>

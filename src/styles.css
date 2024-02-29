@@ -3308,7 +3308,7 @@ select::-ms-expand{
     text-decoration:underline
 }
 .review__stars__icon,.review__stars__icon--00,.review__stars__icon--05,.review__stars__icon--10,.review__stars__icon--15,.review__stars__icon--20,.review__stars__icon--25,.review__stars__icon--30,.review__stars__icon--35,.review__stars__icon--40,.review__stars__icon--45,.review__stars__icon--50,.review__stars__icon--gray--00,.review__stars__icon--gray--05,.review__stars__icon--gray--10,.review__stars__icon--gray--15,.review__stars__icon--gray--20,.review__stars__icon--gray--25,.review__stars__icon--gray--30,.review__stars__icon--gray--35,.review__stars__icon--gray--40,.review__stars__icon--gray--45,.review__stars__icon--gray--50,.review__stars__icon--white--00,.review__stars__icon--white--05,.review__stars__icon--white--10,.review__stars__icon--white--15,.review__stars__icon--white--20,.review__stars__icon--white--25,.review__stars__icon--white--30,.review__stars__icon--white--35,.review__stars__icon--white--40,.review__stars__icon--white--45,.review__stars__icon--white--50{
-    color-adjust:exact;
+    print-color-adjust:exact;
     background:url(https://assets.niche.com/static/platform-sprite-20240206.svg);
     background-size:50em 50em;
     display:inline-block;
@@ -10921,8 +10921,8 @@ body.map-fullscreen .global-nav-container,html.map-fullscreen .global-nav-contai
     width:.9em
 }
 .map-legend span.real-estate-homes{
-    color-adjust:exact;
-    background:url(https://assets.niche.com/static/maps/home-icon.png);
+    print-color-adjust:exact;
+    /* background:url(https://assets.niche.com/static/maps/home-icon.png); */
     background-size:cover
 }
 .map-legend span.secondary-line,.map-legend span.service-area{
@@ -22203,7 +22203,7 @@ body[data-path="/places-to-live/rankings/"] .silo-ranking--highlighted .silo-ran
     top:2px
 }
 .real-estate-marker{
-    background-image:url(/static/maps/home-icon.png);
+    /* background-image:url(/static/maps/home-icon.png); */
     background-size:unset;
     border-radius:13%;
     cursor:pointer;
