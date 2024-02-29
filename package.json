@@ -1,0 +1,11 @@
+{
+  "name": "uni-compare",
+  "version": "1.0.0",
+  "description": "A University Review and Comparison Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edward Lampoh",
+  "license": "MIT"
+}
