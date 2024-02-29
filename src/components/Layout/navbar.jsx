@@ -2,9 +2,10 @@ import React from 'react';
 
 function Navbar({ user }) {
   return (
+    <body >
     <nav className="nav navbar navbar-expand-md bg-dark navbar-dark fixed-top">
       <div className="container">
-        <a href="/" className="navbar-brand">SIK THE DAY</a>      
+        <a href="/" className="navbar-brand">UNI-COMPARE</a>      
 
         <button 
           className="navbar-toggler" 
@@ -47,6 +48,7 @@ function Navbar({ user }) {
         </div>
       </div>
     </nav>
+    </body>
   );
 }
 

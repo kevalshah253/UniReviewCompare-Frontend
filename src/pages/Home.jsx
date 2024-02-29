@@ -4,11 +4,9 @@ import '../css/custom.css';
 import Navbar from '../components/Layout/navbar';
 
 function HomePage() {
-    const user = null;
+    
   return (
     <>
-      <Navbar user={user}/>
-      <body>
         <div className="modal fade" id="newsletterModal" tabIndex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
@@ -30,17 +28,19 @@ function HomePage() {
           <div className="container">
             <div className="d-sm-flex align-items-center justify-content-between">
               <div>
-                <h1>Keep track of the <span className="text-success"> best eats</span> around!</h1>
+                <h1>Make the <span className="text-success"> BEST COLLEGE</span> choices!</h1>
                 <p className="lead my-4">
-                  With <span className="text-success">SIK THE DAY</span>, you never have to wonder what to eat again.
-                  Great for food enthusiasts of all ages.
+                  With <span className="text-success">UNI-COMPARE</span>, you never have to wonder which university to choose.
+                  All details you need in one place!.
                 </p>
                 <a href="/signup" className="btn btn-success btn-lg">Sign Up </a>
               </div>
-              <img className="img-fluid w-50 d-none d-sm-block" src="/images/undraw_eating_together_re_ux62.svg" alt="people eating food" />
+              <img className="img-fluid w-50 d-none d-sm-block" src="./im1.jpeg" alt="people on campus" />
+              
             </div>
           </div>
         </section>
+        <img src='im1.jpeg'/>
         {/* Newsletter Sign Up */}
         <section className="bg-primary text-light p-5">
           <div className="container">
@@ -245,7 +245,6 @@ function HomePage() {
   {/* Assuming 'partials/footer' is a separate component */}
   {/* Include footer component here */}
 </footer>
-</body>
 </>
   );
 };
