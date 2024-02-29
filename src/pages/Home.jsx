@@ -43,13 +43,14 @@ function HomePage() {
          {/* Wave Transition */}
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240" transform="rotate(180)">
         <path fill="#343a40" fillOpacity="1" d="M0,160L48,176C96,192,192,224,288,229.3C384,235,480,213,576,186.7C672,160,768,128,864,133.3C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1046.7,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        <path fill="#dee2e6" fillOpacity="1" d="M0,160L48,176C96,192,192,224,288,229.3C384,235,480,213,576,186.7C672,160,768,128,864,133.3C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1046.7,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
       </svg>
       {/* Next Section */}
-      <section className="p-5 text-dark">
+      <section className="p-5 text-dark bg-explore">
         <div className="container">
           <div className="row align-items-center justify-content-between">
             <div className="col-md">
-              <img src={uni} className="rounded-circle img-fluid" alt="university building" />
+              <img src={uni} className="rounded-circle img-fluid animated fadeInLeft" alt="university building" />
             </div>
             <div className="col-md p-5">
               <h2>Explore Universities</h2>

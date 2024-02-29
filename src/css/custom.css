@@ -266,7 +266,15 @@ pre code {
   color: inherit;
   word-break: normal;
 }
-
+.bg-explore{
+  background-color: #dee2e6 !important;
+  height: auto;
+}
+.bg-explore img{
+  position: absolute;
+  top:600px;
+  width: 40%;
+}
 code {
   font-size: 0.875em;
   color: var(--bs-code-color);
@@ -7296,6 +7304,24 @@ textarea.form-control-lg {
   animation-name: fadeInCenter;
   animation-duration: 1s;
 }
+
+@keyframes fadeInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+}
+
 
 .order-first {
   order: -1 !important;
