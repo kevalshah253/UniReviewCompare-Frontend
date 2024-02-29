@@ -35,31 +35,7 @@ function HomePage() {
                 </p>
                 <a href="/signup" className="btn btn-success btn-lg">Sign Up </a>
               </div>
-              <img className="img-fluid w-50 d-none d-sm-block" src={log} alt="people on campus" />
-            </div>
-          </div>
-        </section>
-        {/* Newsletter Sign Up */}
-        <section className="bg-primary text-light p-5">
-          <div className="container">
-            <div className="d-md-flex justify-content-between align-items-center">
-              <h2 className="mb-2 mb-md-0">Sign Up For Our Newsletter</h2>
-              <div className="input-group news-input">
-                <form>
-                  <div className="col-auto">
-                    <input
-                      type="email"
-                      className="form-control  mb-3"
-                      placeholder="Email"
-                      aria-label="Email"
-                      aria-describedby="button-addon2"
-                    />
-                  </div>
-                  <div className="col-auto">
-                    <button className="btn btn-dark btn-lg " type="button" id="button-addon2" data-bs-toggle="modal" data-bs-target="#newsletterModal">Submit</button>
-                  </div>
-                </form>
-              </div>
+              <img className="rounded-5 img-fluid w-40 animated fadeInRight" src={log} alt="people on campus" />
             </div>
           </div>
         </section>
@@ -77,7 +53,7 @@ function HomePage() {
                       About Us
                     </h3>
                     <p className="card-text">
-                      We're like your favorite book rating app but for restaurants.
+                      We're like your favorite book rating app but for Colleges.
                     </p>
                     <a href="#questions" className="btn btn-success">Read Our FAQs</a>
                   </div>
@@ -90,12 +66,12 @@ function HomePage() {
                       <i className="bi bi-list-ul"></i>
                     </div>
                     <h3 className="card-title">
-                      Lists
+                      Review
                     </h3>
                     <p className="card-text">
-                      SIK THE DAY is an easy way to keep track of where you've been and where you want to be.
+                      Uni-Compare is an easy way to keep track of where you've been and where you want to be.
                     </p>
-                    <a href="/places" className="btn btn-success">Add to List</a>
+                    <a href="/places" className="btn btn-success">Review Schools</a>
                   </div>
                 </div>
               </div>
@@ -106,12 +82,12 @@ function HomePage() {
                       <i className="bi bi-lightbulb-fill"></i>
                     </div>
                     <h3 className="card-title">
-                      Selector
+                      Compare
                     </h3>
                     <p className="card-text">
-                      Our Selector feature helps you choose what to eat tonight from somewhere you already know and love.
+                      Our Compare feature helps you choose what to eat tonight from somewhere you already know and love.
                     </p>
-                    <a href="/selector" className="btn btn-success">Use Selector</a>
+                    <a href="/selector" className="btn btn-success">Use Compare Tool</a>
                   </div>
                 </div>
               </div>
@@ -163,7 +139,30 @@ function HomePage() {
     </div>
   </div>
 </section>
-
+{/* Newsletter Sign Up */}
+<section className="bg-primary text-light p-5">
+          <div className="container">
+            <div className="d-md-flex justify-content-between align-items-center">
+              <h2 className="mb-2 mb-md-0">Sign Up For Our Newsletter</h2>
+              <div className="input-group news-input">
+                <form>
+                  <div className="col-auto">
+                    <input
+                      type="email"
+                      className="form-control  mb-3"
+                      placeholder="Email"
+                      aria-label="Email"
+                      aria-describedby="button-addon2"
+                    />
+                  </div>
+                  <div className="col-auto">
+                    <button className="btn btn-dark btn-lg " type="button" id="button-addon2" data-bs-toggle="modal" data-bs-target="#newsletterModal">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
 <section id="questions" className="p-5">
   <div className="container">
     <h2 className="text-center mb-4">
