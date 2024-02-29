@@ -1,5 +1,6 @@
 import React from 'react';
-import ''
+import '../css/style.css';
+import '../css/custom.css';
 import Navbar from '../components/Layout/navbar';
 
 function HomePage() {
