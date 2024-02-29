@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/style.css';
 import '../css/custom.css';
-import Navbar from '../components/Layout/navbar';
+import log from'./images/im1.jpeg';
 
 function HomePage() {
     
@@ -31,16 +31,14 @@ function HomePage() {
                 <h1>Make the <span className="text-success"> BEST COLLEGE</span> choices!</h1>
                 <p className="lead my-4">
                   With <span className="text-success">UNI-COMPARE</span>, you never have to wonder which university to choose.
-                  All details you need in one place!.
+                  All the details you need in one place!.
                 </p>
                 <a href="/signup" className="btn btn-success btn-lg">Sign Up </a>
               </div>
-              <img className="img-fluid w-50 d-none d-sm-block" src="./im1.jpeg" alt="people on campus" />
-              
+              <img className="img-fluid w-50 d-none d-sm-block" src={log} alt="people on campus" />
             </div>
           </div>
         </section>
-        <img src='im1.jpeg'/>
         {/* Newsletter Sign Up */}
         <section className="bg-primary text-light p-5">
           <div className="container">
