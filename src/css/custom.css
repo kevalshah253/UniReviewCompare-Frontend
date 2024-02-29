@@ -7259,7 +7259,6 @@ textarea.form-control-lg {
   align-self: stretch !important;
 }
 .animated {
-  animation-duration: 1.5s;
   animation-fill-mode: both;
 }
 
@@ -7277,6 +7276,8 @@ textarea.form-control-lg {
 
 .fadeInRight {
   animation-name: fadeInRight;
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
 }
 
 @keyframes fadeInCenter {
@@ -7293,6 +7294,7 @@ textarea.form-control-lg {
 
 .fadeInCenter {
   animation-name: fadeInCenter;
+  animation-duration: 1s;
 }
 
 .order-first {
