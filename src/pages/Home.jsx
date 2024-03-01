@@ -128,7 +128,7 @@ function HomePage() {
                       Compare
                     </h3>
                     <p className="card-text">
-                      Our Compare feature helps you choose what to eat tonight from somewhere you already know and love.
+                      Our Compare feature helps compare 2 or 3 schools side by side based on the criteria that matter to you
                     </p>
                     <a href="/selector" className="btn btn-success">Use Compare Tool</a>
                   </div>
