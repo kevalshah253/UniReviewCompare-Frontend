@@ -274,6 +274,15 @@ pre code {
   position: absolute;
   top:600px;
   width: 40%;
+  /* width: "100%";
+  max-width: auto; 
+  height: "auto"; 
+  position: "absolute";
+  top: "300px"  */
+}
+.home-svg{
+  position: absolute;
+  top: 600px;
 }
 code {
   font-size: 0.875em;
