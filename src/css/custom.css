@@ -3262,7 +3262,15 @@ textarea.form-control-lg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%; /* Adjust width as needed */
+  width: 40%; /* Adjust width as needed */
+  z-index: 20;
+}
+.reg-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%; /* Adjust width as needed */
   z-index: 20;
 }
 .bg-login{
@@ -3274,7 +3282,15 @@ textarea.form-control-lg {
 .bg-login .btn-success:hover{
   background-color: #1b5759;
 }
-
+.bg-reg{
+  background-color: #bb7e0e;
+}
+.bg-reg .btn-success{
+  background-color: #2a8487;
+}
+.bg-reg .btn-success:hover{
+  background-color: #1b5759;
+}
 .dropup .dropdown-menu[data-bs-popper] {
   top: auto;
   bottom: 100%;

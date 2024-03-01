@@ -1,4 +1,5 @@
 import React from 'react';
+import HomePage from './Home';
 
 const Register = () => {
   return (
@@ -6,7 +7,10 @@ const Register = () => {
       {/* {messages.errors && messages.errors.map((el, index) => (
         <div key={index} className="alert alert-danger">{el.msg}</div>
       ))} */}
-      <section className="bg-dark text-light p-5">
+      <div className='blur-overlay'></div>
+         <HomePage/>
+         <div className='reg-container'>
+      <section className="bg-reg text-light p-5">
         <div className="container">
           <h1 className="text-light">Create an Account</h1>
           <form action="/signup" method="POST">
@@ -54,6 +58,7 @@ const Register = () => {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 };
