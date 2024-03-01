@@ -1,24 +1,24 @@
 import React from 'react';
 import '../css/style.css';
 import '../css/custom.css';
-const Login = ({ messages }) => {
+import HomePage from './Home';
+
+const Login = () => {
   return (
     <>
-      <header>
-        {/* Assuming 'partials/header' is a separate component */}
-        {/* Include header component here */}
-      </header>
-      <body>
-        {messages.errors && messages.errors.map((el, index) => (
+        {/* {messages.errors && messages.errors.map((el, index) => (
           <div key={index} className="alert alert-danger">{el.msg}</div>
         ))}
         {messages.info && messages.info.map((el, index) => (
           <div key={index} className="alert alert-danger">{el.msg}</div>
-        ))}
-        <section className="bg-dark text-light p-5">
-          {messages.errors && messages.errors.map((el, index) => (
+        ))} */}
+         <div className='blur-overlay'></div>
+         <HomePage/>
+        <div className="login-container">
+        <section className="bg-login text-light p-5">
+          {/* {messages.errors && messages.errors.map((el, index) => (
             <div key={index} className="alert alert-danger">{el.msg}</div>
-          ))}
+          ))} */}
           <div className="container">
             <h1 className="text-light">Log In</h1>
             <form action="/login" method="POST">
@@ -44,24 +44,17 @@ const Login = ({ messages }) => {
               <div className="col-md p-5">
                 <h2>Welcome Back!</h2>
                 <p className="lead">
-                  We hope you've been to some epic places since your last visit.
+                  Found your school yet? Leave some reviews
                 </p>
                 <p>Don't have an account yet?</p>
                 <a href="/signup" className="btn btn-light align-items-left">
                   <i className="bi bi-chevron-right"></i>Sign Up
                 </a>
               </div>
-              <div className="col-md">
-                <img src="/images/undraw_tasting_re_3k5a.svg" className="img-fluid" alt="People tasting food and rating it" />
-              </div>
             </div>
           </div>
         </section>
-      </body>
-      <footer>
-        {/* Assuming 'partials/footer' is a separate component */}
-        {/* Include footer component here */}
-      </footer>
+        </div>
     </>
   );
 };
