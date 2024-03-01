@@ -11,7 +11,6 @@ const Login = () => {
     const userEmail = useRef();
     const userPassword = useRef();
     const navigate = useNavigate(); 
-    /* Submit button */
     async function handleSubmit(event) {
     event.preventDefault();
 
@@ -37,7 +36,7 @@ const Login = () => {
         navigate('/dashboard');
     } else {
         console.log("Something Wrong");
-        alertify.error('Something Wrong');
+        alertify.error('Something went wrong!');
     }
 
     userEmail.current.value = "";
