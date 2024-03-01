@@ -37,7 +37,7 @@
   --bs-dark: #071e22;
   --bs-primary-rgb: 29, 120, 116;
   --bs-secondary-rgb: 12, 206, 107;
-  --bs-success-rgb: 12, 206, 107;
+  --bs-success-rgb: 255, 165, 0;
   --bs-warning-rgb: 220, 255, 80;
   --bs-danger-rgb: 245, 0, 16;
   --bs-dark-rgb: 7, 30, 34;
@@ -2836,11 +2836,11 @@ textarea.form-control-lg {
 
 .btn-success {
   --bs-btn-color: #000;
-  --bs-btn-bg: #0cce6b;
-  --bs-btn-border-color: #0cce6b;
+  --bs-btn-bg: #df9f13;
+  --bs-btn-border-color: #df9f13;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #30d581;
-  --bs-btn-hover-border-color: #24d37a;
+  --bs-btn-hover-bg: #bb7e0e;
+  --bs-btn-hover-border-color: #bb7e0e;
   --bs-btn-focus-shadow-rgb: 10, 175, 91;
   --bs-btn-active-color: #000;
   --bs-btn-active-bg: #3dd889;

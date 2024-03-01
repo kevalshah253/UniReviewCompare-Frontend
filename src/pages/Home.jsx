@@ -57,7 +57,7 @@ function HomePage() {
               <p className="lead">
                 Discover a wide range of universities around the world. Uni-Compare provides detailed information about each university, including programs offered, admission requirements, campus facilities, and more.
               </p>
-              <a href="/universities" className="btn btn-dark mt-3">Explore Now</a>
+              <a href="/universities" className="btn btn-success mt-3">Explore Now</a>
             </div>
           </div>
         </div>
