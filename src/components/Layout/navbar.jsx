@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar({ user }) {
+    const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/login');
+  };
   return (
     <body >
     <nav className="nav navbar navbar-expand-md bg-dark navbar-dark fixed-top">
@@ -31,16 +38,16 @@ function Navbar({ user }) {
             ) : (
               <>
                 <li className="nav-item">
-                  <a href="/profile" className="nav-link">Profile</a>
+                  <a href="/profile" className="nav-link">Hi, {user}!</a>
                 </li>
                 <li className="nav-item">
-                  <a href="/places" className="nav-link">Lists</a>
+                  <a href="/schools" className="nav-link">Schools</a>
                 </li>
                 <li className="nav-item">
-                  <a href="/selector" className="nav-link">Selector</a>
+                  <a href="/compare" className="nav-link">Compare</a>
                 </li>
                 <li className="nav-item">
-                  <a href="/logout" className="nav-link">Logout</a>
+                  <a href="/" className="nav-link" onClick={handleLogout}>Logout</a>
                 </li>
               </>
             )}
