@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+
+    font-family: 'Raleway' !important;
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.image:hover {
+    -webkit-mask-image: linear-gradient(#fff, transparent);
+    mask-image: linear-gradient(#fff, transparent);
+    cursor: pointer;
+}
