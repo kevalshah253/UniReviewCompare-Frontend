@@ -25,7 +25,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="app-container">
+    <div className='outer'>
+      <div className='inner'>
+      <div className="app-container">
       <div className="sidebar">
         <div className="sidebar-header">
           <div className="app-icon">
@@ -155,6 +157,8 @@ const Dashboard = () => {
               </Box>
             </Grid>
         </Grid>
+      </div>
+    </div>
       </div>
     </div>
   );
