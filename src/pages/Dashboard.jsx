@@ -17,9 +17,7 @@ const Dashboard = () => {
     page * itemsPerPage
   );
 
-  // Change page
-
-  
+  // Change page  
   const handleChange = (event, value) => {
     setPage(value);
   };

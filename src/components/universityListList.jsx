@@ -23,7 +23,7 @@ const UniversityListList  = (props) => {
           </div>
           <div className="product-cell status-cell">
             <span className="cell-label">Status:</span>
-            <span className="status active">CAD {university.tuition}</span> {/* Use university.tuition */}
+            <span className="status active">{university.tuition}</span> {/* Use university.tuition */}
           </div>
           <div className="product-cell sales">
             <span className="cell-label">Acceptance Rate:</span>{university.acceptanceRate} {/* Use university.acceptanceRate */}
