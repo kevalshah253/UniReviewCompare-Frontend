@@ -4,6 +4,7 @@ import Sidebar from '../components/sidebar';
 import UniversityList from '../components/universityList';
 import Profile from './Profile';
 import { ThemeProvider, createTheme } from '@mui/material';
+import RateAndReview from './RateAndReview';
 
 
 const Dashboard = () => {
@@ -22,7 +23,7 @@ const Dashboard = () => {
       case 'Review':
         return <Review />;
       case 'Compare':
-        return <Compare />;
+        return <RateAndReview />;
       case 'AboutUs':
         return <ThemeProvider theme={theme}><Profile /></ThemeProvider>;
       case 'Profile':
