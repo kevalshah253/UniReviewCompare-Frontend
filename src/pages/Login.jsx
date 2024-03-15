@@ -3,45 +3,51 @@ import '../css/style.css';
 import '../css/custom.css';
 import HomePage from './Home';
 import { useNavigate } from 'react-router-dom';
-import dummyUsers from '../data/dummyUsers';
-import alertify from 'alertifyjs'
+import alertify from 'alertifyjs';
 
 const Login = () => {
-    const [persons, setPersons]= React.useState([])
     const userEmail = useRef();
     const userPassword = useRef();
     const navigate = useNavigate(); 
+
     async function handleSubmit(event) {
-    event.preventDefault();
-
-    const email = userEmail.current.value;
-    const password = userPassword.current.value;
-    const user = dummyUsers.find((person) => person.email === email && person.password === password);
-
-    if (user) {
-        if (localStorage.getItem('user')) {
-        localStorage.removeItem('id');
-        localStorage.removeItem('user');
-        localStorage.removeItem('name');
-        localStorage.removeItem('surname');
-        localStorage.removeItem('email');
+        event.preventDefault();
+    
+        // Check if the refs are defined before accessing their value property
+        if (userEmail.current && userPassword.current) {
+            const email = userEmail.current.value;
+            const password = userPassword.current.value;
+    
+            try {
+                const response = await fetch('http://localhost:8000/v1/login/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+    
+                if (!response.ok) {
+                    throw new Error('Invalid credentials');
+                }
+    
+                const user = await response.json();
+    
+                localStorage.setItem('user', JSON.stringify(user));
+                //onLogin(user); // Update user state in parent component
+                alertify.success('Success!');
+                navigate('/dashboard');
+            } catch (error) {
+                console.error(error);
+                alertify.error('Something went wrong!');
+            }
+    
+            // Clear input values after form submission
+            userEmail.current.value = "";
+            userPassword.current.value = "";
         }
-        setPersons(user);
-        localStorage.setItem("user", true);
-        localStorage.setItem('id', user._id);
-        localStorage.setItem('name', user.name);
-        localStorage.setItem('surname', user.surname);
-        localStorage.setItem('email', user.email);
-        alertify.success('Success!');
-        navigate('/dashboard');
-    } else {
-        console.log("Something Wrong");
-        alertify.error('Something went wrong!');
     }
-
-    userEmail.current.value = "";
-    userPassword.current.value = "";
-    }
+    
 
     return (
         <>

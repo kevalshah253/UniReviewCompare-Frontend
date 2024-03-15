@@ -6,15 +6,12 @@ import Footer from './components/Layout/footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-// Import other pages here
-// import Footer from './components/Layout/Footer';
 
 const App = () => {
-    const user = null;
     return (
         <>
             <BrowserRouter>
-            <Navbar user={user}/>
+            <Navbar />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/login" element={<Login />} />
