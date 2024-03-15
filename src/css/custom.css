@@ -653,7 +653,9 @@ h3.text-center {
     color: wheat;
     padding: 8px;
 }
-
+.submit{
+  padding: 18px;
+}
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;

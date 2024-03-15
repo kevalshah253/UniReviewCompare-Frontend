@@ -37,7 +37,7 @@ function Profile() {
 
     return (
         <div className="container">
-		<div className="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12 edit_information">
+		<div className="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
 			<form action=""  method="POST">	
 				<h3 className="text-center">Edit Personal Information</h3>
 				<div className="row">
@@ -109,7 +109,7 @@ function Profile() {
 				<div className="row">
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 submit">
 						<div className="form-group">
-							<input type="submit" className="btn btn-success" value="Submit"/>
+							<input type="submit" className="btn btn-success edit-btn" value="Submit"/>
 						</div>
 					</div>
 				</div>
