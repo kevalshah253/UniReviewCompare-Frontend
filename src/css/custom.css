@@ -648,6 +648,12 @@ progress {
   margin-left: auto;
 }
 
+.profile_details_text,
+h3.text-center {
+    color: wheat;
+    padding: 8px;
+}
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
