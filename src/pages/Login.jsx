@@ -14,7 +14,7 @@ const Login = () => {
         event.preventDefault();
     
         // Check if the refs are defined before accessing their value property
-        if (userEmail.current && userPassword.current) {
+        if (userEmail.current && userEmail.current.value && userPassword.current && userPassword.current.value) {
             const email = userEmail.current.value;
             const password = userPassword.current.value;
     
@@ -43,8 +43,10 @@ const Login = () => {
             }
     
             // Clear input values after form submission
-            userEmail.current.value = "";
-            userPassword.current.value = "";
+            if (userEmail.current && userPassword.current) {
+                userEmail.current.value = "";
+                userPassword.current.value = "";
+            }
         }
     }
     
