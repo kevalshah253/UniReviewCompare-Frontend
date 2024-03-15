@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="footer p-5 bg-dark text-white text-center position-relative bottom-0 mt-auto">
+    <footer className="p-5 bg-dark text-white text-center position-relative bottom-0 end-0 mt-auto">
       <div className="container">
         <p className="lead">Copyright &copy; UNI-COMPARE</p>
         <a href="#" className="position-absolute bottom-0 end-0 p-5" aria-label="go to top of page">
@@ -14,5 +14,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// r bottom-0 w-100
