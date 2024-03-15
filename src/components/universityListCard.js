@@ -56,12 +56,6 @@ const UniversityListCard = () => {
                     <div className="app-content">
                         <div className="app-content-header">
                         <div className="p-8">
-            <div className='mx-12 lg:flex md:flex lg:justify-between lg:items-center md:justify-between md:items-center'>
-            
-            <div>
-                <Link to="/university/comparision"><button className='bg-blue-700 rounded-md px-4 py-2 text-white'>Compare Universities</button></Link>
-            </div>
-            </div>
             {loading ? (
                 <Loader />
             ) : universities?.length > 0 ? (

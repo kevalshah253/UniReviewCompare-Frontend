@@ -8,7 +8,7 @@ function HomePage() {
     
   return (
     <>
-        <div className="modal fade" id="newsletterModal" tabIndex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+        {/* <div className="modal fade" id="newsletterModal" tabIndex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
@@ -23,7 +23,7 @@ function HomePage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Hero Section */}
         <section className="bg-dark text-light p-4 p-lg-0 pt-5 text-center text-sm-start">
           <div className="container">
@@ -128,7 +128,7 @@ function HomePage() {
                       Compare
                     </h3>
                     <p className="card-text">
-                      Our Compare feature helps compare 2 or 3 schools side by side based on the criteria that matter to you
+                      Our Compare feature helps compare 2 or 3 schools side by side 
                     </p>
                     <a href="/selector" className="btn btn-success">Use Compare Tool</a>
                   </div>

@@ -29,7 +29,7 @@ function Navbar({ user }) {
             {!user ? (
               <>
                 <li className="nav-item px-2">
-                  <a href="/login" className="nav-link">Login</a>
+                  <a href="/login" className="nav-link btn">Login</a>
                 </li>
                 <li className="nav-item">
                   <a href="/signup" className="nav-link btn btn-success text-dark">Signup</a>

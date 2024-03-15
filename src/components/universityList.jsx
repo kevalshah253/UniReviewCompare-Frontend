@@ -76,10 +76,8 @@ const UniversityList = () => {
               </button></div>
              
           </div>
-          <UniversityListList cards={currentCards} />        
-        </div>
-        )}
-        <Grid container style={{ justifyContent: "center", marginBottom: 20 }}>
+          <UniversityListList cards={currentCards} /> 
+          <Grid container style={{ justifyContent: "center", marginBottom: 20 }}>
             <Grid item>
               <Divider />
               <Box component="span">
@@ -95,7 +93,10 @@ const UniversityList = () => {
                 />
               </Box>
             </Grid>
-        </Grid>
+        </Grid>       
+        </div>
+        )}
+        
       </>
   );
 };
