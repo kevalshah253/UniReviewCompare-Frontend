@@ -12,12 +12,14 @@ const Dashboard = () => {
   );
 
   /* Slice the data and show number of Cards in one Page */
-  // const currentCards = fakeUniData.slice(
-  //   (page - 1) * itemsPerPage,
-  //   page * itemsPerPage
-  // );
+  const currentCards = fakeUniData.slice(
+    (page - 1) * itemsPerPage,
+    page * itemsPerPage
+  );
 
   // Change page
+
+  
   const handleChange = (event, value) => {
     setPage(value);
   };
@@ -134,23 +136,7 @@ const Dashboard = () => {
               </button></div>
              
           </div>
-          <UniversityListList/>
-          {/* <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/>
-          <UniversityListList/> */}
-            
+          <UniversityListList cards={currentCards} />        
         </div>
         <Grid container style={{ justifyContent: "center", marginBottom: 20 }}>
             <Grid item>
