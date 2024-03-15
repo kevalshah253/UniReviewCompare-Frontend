@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image:hover {
+    -webkit-mask-image: linear-gradient(#fff, transparent);
+    mask-image: linear-gradient(#fff, transparent);
+    cursor: pointer;
+}

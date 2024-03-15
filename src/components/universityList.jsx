@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/dash.scss';
 import UniversityListList from './universityListList';
 import { Box, Divider, Grid, Pagination } from '@mui/material';
 import fakeUniData from '../data/fakeUni';
 import Filter from './filter';
+import UniversityListCard from './universityListCard';
 
 
 const UniversityList = () => {
@@ -12,6 +13,15 @@ const UniversityList = () => {
   const [numberOfPages] = React.useState(
     Math.ceil(fakeUniData.length / itemsPerPage)
   );
+
+  const [isGridView, setIsGridView] = useState(false);
+
+  const handleGridView = () => {
+    setIsGridView(true); 
+  }
+  const handleListView = () => {
+    setIsGridView(false); 
+  }
 
   /* Slice the data and show number of Cards in one Page */
   const currentCards = fakeUniData.slice(
@@ -33,15 +43,18 @@ const UniversityList = () => {
           <input className="search-bar" placeholder="Search..." type="text"/>
           <div className="app-content-actions-wrapper">
             <Filter/>
-            <button className="action-button list active" title="List View">
+            <button className="action-button list active" title="List View" onClick={() => handleListView()}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
             </button>
-            <button className="action-button grid" title="Grid View">
+            <button className="action-button grid" title="Grid View" onClick={() => handleGridView()}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-grid"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
             </button>
           </div>
         </div>
-        <div className="products-area-wrapper tableView">
+        {isGridView ?(
+            <UniversityListCard/>
+        ) : (
+            <div className="products-area-wrapper tableView">
           <div className="products-header">
             <div className="product-cell image">
               Schools
@@ -65,6 +78,7 @@ const UniversityList = () => {
           </div>
           <UniversityListList cards={currentCards} />        
         </div>
+        )}
         <Grid container style={{ justifyContent: "center", marginBottom: 20 }}>
             <Grid item>
               <Divider />
