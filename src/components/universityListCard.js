@@ -50,62 +50,45 @@ const UniversityListCard = () => {
 
     return (
         <div className="container mt-5">
-            <div className="row justify-content-center">
-                <div className="col-lg-6">
-                    <div className="card">
-                        <div className="card-body">
-                            {/* <div className="mb-3 d-flex justify-content-between align-items-center">
-                                <h2 className="text-xl font-semibold mb-4">University List</h2>
-                                <div className="input-group">
-                                    <input type="text" className="form-control" placeholder="Search University" onChange={handleSearch} />
-                                    <button className="btn btn-primary" type="button">
-                                        <FaSearch />
-                                    </button>
-                                </div>
-                            </div> */}
-                            {loading ? (
-                                <Loader />
-                            ) : universities?.length > 0 ? (
-                                <div className="mb-8">
-                                    {universities.map((university) => (
-                                        <div key={university.id} className="card mb-4">
-                                            <div className="card-body">
-                                                <Link to={`/university/${university.id}`}>
-                                                    <div className="bg-cover bg-center h-56 p-4" style={{ backgroundImage: `url(${university.image_url})` }}>
-                                                        <div className="d-flex justify-content-end">
-                                                            <svg className="h-6 w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                                <path d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"></path>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                </Link>
-                                                <div className="mt-3">
-                                                    <p className="font-bold">{university.name}</p>
-                                                    <p className="text-gray-600">{university.location}</p>
-                                                </div>
-                                            </div>
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+                {loading ? (
+                    <Loader />
+                ) : universities?.length > 0 ? (
+                    universities.map((university) => (
+                        <div key={university.id} className="col">
+                            <div className="card h-100 d-flex flex-column">
+                                <div className="card-body">
+                                    <Link to={`/university/${university.id}`}>
+                                        <div className="image-container overflow-hidden" style={{ height: '200px' }}>
+                                            <img src={university.image_url} alt={university.name} className="img-fluid w-100" style={{ height: '100%', objectFit: 'cover' }} />
                                         </div>
-                                    ))}
+                                    </Link>
+                                    <div className="mt-3">
+                                        <p className="font-bold">{university.name}</p>
+                                        <p className="text-gray-600">{university.location}</p>
+                                    </div>
                                 </div>
-                            ) : (
-                                <div className="text-center">No Universities Found</div>
-                            )}
-                            {universities?.length > 0 && (
-                                <div className="d-flex justify-content-center">
-                                    <button onClick={handlePreviousPage} disabled={currentPage === 1} className="btn btn-primary me-2">
-                                        Previous
-                                    </button>
-                                    <button onClick={handleNextPage} disabled={currentPage === totalPages} className="btn btn-primary">
-                                        Next
-                                    </button>
-                                </div>
-                            )}
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    ))
+                ) : (
+                    <div className="text-center">No Universities Found</div>
+                )}
             </div>
+            {universities?.length > 0 && (
+                <div className="d-flex justify-content-center mt-3">
+                    <button onClick={handlePreviousPage} disabled={currentPage === 1} className="btn btn-primary me-2">
+                        Previous
+                    </button>
+                    <button onClick={handleNextPage} disabled={currentPage === totalPages} className="btn btn-primary">
+                        Next
+                    </button>
+                </div>
+            )}
         </div>
     );
+       
 };
+
 
 export default UniversityListCard;
