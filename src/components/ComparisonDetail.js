@@ -33,10 +33,10 @@ const ComparisionDetail = ({university}) => {
                                     <div>{university.ranking}</div>
                                     <div className="font-semibold">Website:</div>
                                     <div><a href={university.website} target='_blank' className="text-blue-500">{university.website}</a></div>
-                                    <div className="font-semibold">Google Review:</div>
+                                    {/* <div className="font-semibold">Google Review:</div>
                                     <div>{university.google_review}</div>
                                     <div className="font-semibold">UniReview:</div>
-                                    <div>{university.uniReview}</div>
+                                    <div>{university.uniReview}</div> */}
                                 </div>
                             </div>
                         </div>

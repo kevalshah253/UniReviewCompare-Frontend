@@ -39,43 +39,53 @@ const Popup = ({ universities, onSelect, setShowPopup }) => {
 
 const RateAndReview = () => {
     const [universities, setUniversities] = useState([]);
-    const [showPopup, setShowPopup] = useState(false);
+    const [showPopup1, setShowPopup1] = useState(false); // State for box 1
+    const [showPopup2, setShowPopup2] = useState(false); // State for box 2
     const [selectedUniversity, setSelectedUniversity] = useState({
         box1: null,
         box2: null,
     });
 
+    // Fetch universities from API
     useEffect(() => {
-        // Fetch universities from API
         axios.get('http://localhost:8000/v1/universities', {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `${localStorage.getItem('token')}`
             }
         })
-            .then(response => {
-                setUniversities(response.data);
-            })
-            .catch(error => {
-                console.error('Error fetching universities:', error);
-            });
+        .then(response => {
+            setUniversities(response.data);
+        })
+        .catch(error => {
+            console.error('Error fetching universities:', error);
+        });
     }, []);
 
+    // Function to handle adding university click
     const handleAddUniClick = (boxNumber) => {
-        setShowPopup(true);
+        if (boxNumber === 'box1') {
+            setShowPopup1(true); // Set state for box 1
+        } else if (boxNumber === 'box2') {
+            setShowPopup2(true); // Set state for box 2
+        }
         setSelectedUniversity(prevState => ({
             ...prevState,
             [boxNumber]: null,
         }));
     };
 
-    const handleUniversitySelect = (university) => {
-        const boxNumber = selectedUniversity.box1 ? 'box2' : 'box1';
+    // Function to handle university selection
+    const handleUniversitySelect = (university, boxNumber) => {
         setSelectedUniversity(prevState => ({
             ...prevState,
             [boxNumber]: university,
         }));
-        setShowPopup(false);
+        if (boxNumber === 'box1') {
+            setShowPopup1(false); // Hide popup for box 1
+        } else if (boxNumber === 'box2') {
+            setShowPopup2(false); // Hide popup for box 2
+        }
     };
 
     return (
@@ -85,6 +95,7 @@ const RateAndReview = () => {
                 <div className="col-lg-6 mb-4">
                     <div className="border rounded p-4 bg-dark text-white">
                         <h2 className="text-xl font-semibold mb-4">University 1</h2>
+                        {showPopup1 && <Popup universities={universities} onSelect={(university) => handleUniversitySelect(university, 'box1')} setShowPopup={setShowPopup1} />}
                         <button onClick={() => handleAddUniClick('box1')} className="btn btn-primary mb-3">Add Uni</button>
                         {selectedUniversity.box1 && (
                             <ComparisionDetail university={selectedUniversity.box1} />
@@ -95,17 +106,17 @@ const RateAndReview = () => {
                 <div className="col-lg-6 mb-4">
                     <div className="border rounded p-4 bg-dark text-white">
                         <h2 className="text-xl font-semibold mb-4">University 2</h2>
+                        {showPopup2 && <Popup universities={universities} onSelect={(university) => handleUniversitySelect(university, 'box2')} setShowPopup={setShowPopup2} />}
                         <button onClick={() => handleAddUniClick('box2')} className="btn btn-primary mb-3">Add Uni</button>
                         {selectedUniversity.box2 && (
                             <ComparisionDetail university={selectedUniversity.box2} />
                         )}
                     </div>
                 </div>
-
-                {showPopup && <Popup universities={universities} onSelect={handleUniversitySelect} setShowPopup={setShowPopup} />}
             </div>
         </div>
     );
 };
 
 export default RateAndReview;
+
