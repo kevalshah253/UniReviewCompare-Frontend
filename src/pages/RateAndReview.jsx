@@ -20,7 +20,7 @@ const Popup = ({ universities, onSelect, setShowPopup }) => {
             <div className="bg-white p-8 rounded-lg">
                 <div className='flex justify-between items-center'>
                     <h2 className="text-xl font-semibold mb-4">Select University</h2>
-                    <h2 className='text-2xl cursor-pointer font-semibold mb-4 ml-4' onClick={() => setShowPopup(false)}><IoIosClose /></h2>
+                    <h2 className='text-2xl cursor-pointer font-semibold mb-4 ml-4 text-white' onClick={() => setShowPopup(false)}><IoIosClose /></h2>
                 </div>
                 <div>
                     <input type="text" onChange={handleSearchChange} placeholder="Search University" className="form-control mb-4" />
@@ -83,7 +83,7 @@ const RateAndReview = () => {
             <div className="row">
                 {/* Giant Box 1 */}
                 <div className="col-lg-6 mb-4">
-                    <div className="border rounded p-4">
+                    <div className="border rounded p-4 bg-dark text-white">
                         <h2 className="text-xl font-semibold mb-4">University 1</h2>
                         <button onClick={() => handleAddUniClick('box1')} className="btn btn-primary mb-3">Add Uni</button>
                         {selectedUniversity.box1 && (
@@ -91,10 +91,9 @@ const RateAndReview = () => {
                         )}
                     </div>
                 </div>
-
                 {/* Giant Box 2 */}
                 <div className="col-lg-6 mb-4">
-                    <div className="border rounded p-4">
+                    <div className="border rounded p-4 bg-dark text-white">
                         <h2 className="text-xl font-semibold mb-4">University 2</h2>
                         <button onClick={() => handleAddUniClick('box2')} className="btn btn-primary mb-3">Add Uni</button>
                         {selectedUniversity.box2 && (

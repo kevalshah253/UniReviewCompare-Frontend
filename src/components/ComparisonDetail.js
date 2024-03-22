@@ -2,12 +2,12 @@ import React from 'react';
 
 const ComparisionDetail = ({university}) => {
     return (
-        <div className="container mt-5">
+        <div className="container-fluid mt-5">
             <div className="row justify-content-center">
-                <div className="col-lg-8">
-                    <div className="card">
+                <div className="col-lg-11">
+                    <div className="card bg-primary text-white">
                         <div className="card-body">
-                            <img src={university.image_url} alt={university.name} className="card-img-top rounded-lg shadow-md mb-4" style={{ height: '300px', objectFit: 'cover' }} />
+                            <img src={university.image_url} alt={university.name} className="card-img-top rounded-lg shadow-md mb-4 w-100" style={{ height: '300px', objectFit: 'cover' }} />
                             <h2 className="text-2xl font-semibold mb-2">{university.name}</h2>
                             <div className="row">
                                 <div className="col-md-6">
