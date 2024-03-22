@@ -4,7 +4,8 @@ import UniversityListList from './universityListList';
 import { Box, Divider, Grid, Pagination } from '@mui/material';
 import fakeUniData from '../data/fakeUni';
 import Filter from './filter';
-import UniversityListCard from './universityListCard';
+// import UniversityListCard from './universityListCard';
+import UniversityListCard2 from './test';
 
 
 const UniversityList = () => {
@@ -52,7 +53,7 @@ const UniversityList = () => {
           </div>
         </div>
         {isGridView ?(
-            <UniversityListCard/>
+            <UniversityListCard2/>
         ) : (
             <div className="products-area-wrapper tableView">
           <div className="products-header">
