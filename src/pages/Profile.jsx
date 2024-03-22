@@ -71,14 +71,7 @@ function Profile() {
 						</div>
 					</div>
 				</div>
-				<div className="row">
-					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div className="form-group">
-							<label className="profile_details_text">Date Of Birth:</label>
-							<input type="date" name="birthday" className="form-control" value="" required/>
-						</div>
-					</div>
-				</div>
+				
 				<div className="row">
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div className="form-group">
@@ -90,14 +83,7 @@ function Profile() {
 						</div>
 					</div>
 				</div>
-				<div className="row">
-					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div className="form-group">
-							<label className="profile_details_text">Nationality:</label>
-							<input type="text" name="nationality" className="form-control" value="" required/>
-						</div>
-					</div>
-				</div>
+				
 				<div className="row">
 					<div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 submit">
 						<div className="form-group">

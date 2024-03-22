@@ -96,7 +96,7 @@ const RateAndReview = () => {
                     <div className="border rounded p-4 bg-dark text-white">
                         <h2 className="text-xl font-semibold mb-4">University 1</h2>
                         {showPopup1 && <Popup universities={universities} onSelect={(university) => handleUniversitySelect(university, 'box1')} setShowPopup={setShowPopup1} />}
-                        <button onClick={() => handleAddUniClick('box1')} className="btn btn-primary mb-3">Add Uni</button>
+                        <button onClick={() => handleAddUniClick('box1')} className="btn bg-primary text-white mb-3">Add Uni</button>
                         {selectedUniversity.box1 && (
                             <ComparisionDetail university={selectedUniversity.box1} />
                         )}
@@ -107,7 +107,7 @@ const RateAndReview = () => {
                     <div className="border rounded p-4 bg-dark text-white">
                         <h2 className="text-xl font-semibold mb-4">University 2</h2>
                         {showPopup2 && <Popup universities={universities} onSelect={(university) => handleUniversitySelect(university, 'box2')} setShowPopup={setShowPopup2} />}
-                        <button onClick={() => handleAddUniClick('box2')} className="btn btn-primary mb-3">Add Uni</button>
+                        <button onClick={() => handleAddUniClick('box2')} className="btn bg-primary text-white mb-3">Add Uni</button>
                         {selectedUniversity.box2 && (
                             <ComparisionDetail university={selectedUniversity.box2} />
                         )}

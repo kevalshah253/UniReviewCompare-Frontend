@@ -56,7 +56,7 @@ const UniversityListCard = () => {
                 ) : universities?.length > 0 ? (
                     universities.map((university) => (
                         <div key={university.id} className="col">
-                            <div className="card h-100 d-flex flex-column">
+                            <div className="card h-100 d-flex flex-column bg-dark text-white">
                                 <div className="card-body">
                                     <Link to={`/university/${university.id}`}>
                                         <div className="image-container overflow-hidden" style={{ height: '200px' }}>
