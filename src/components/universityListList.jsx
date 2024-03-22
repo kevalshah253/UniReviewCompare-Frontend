@@ -1,43 +1,54 @@
-import React from 'react';
-import { Rating, Stack } from '@mui/material'; 
-import '../css/dash.scss';
+import React, { useState, useEffect } from 'react';
 
-const UniversityListList  = (props) => {
+const UniversityListTable = () => {
+  const [universities, setUniversities] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8000/v1/universities')
+      .then(response => response.json())
+      .then(data => setUniversities(data))
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
   return (
-    <>
-      {props.cards.map((university, index) =>( // Map through the dummy data
-        <div className="products-row" key={university.id}>
-          <button className="cell-more-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-more-vertical">
-              <circle cx="12" cy="12" r="1"/>
-              <circle cx="12" cy="5" r="1"/>
-              <circle cx="12" cy="19" r="1"/>
-            </svg>
-          </button>
-          <div className="product-cell image">
-            <img src={university.image} alt={university.university} /> {/* Use university.image */}
-            <span>{university.university}</span> {/* Use university.company */}
-          </div>
-          <div className="product-cell category">
-            <span className="cell-label">Location:</span>{university.location} {/* Use university.location */}
-          </div>
-          <div className="product-cell status-cell">
-            <span className="cell-label">Status:</span>
-            <span className="status active">{university.tuition}</span> {/* Use university.tuition */}
-          </div>
-          <div className="product-cell sales">
-            <span className="cell-label">Acceptance Rate:</span>{university.acceptanceRate} {/* Use university.acceptanceRate */}
-          </div>
-          <div className="product-cell price">
-            <span className="cell-label">Rating:</span>
-            <Stack spacing={1}>
-              <Rating name="half-rating" value={university.rating} precision={0.5} readOnly /> {/* Use university.rating */}
-            </Stack>
+    <div className="container mt-3">
+      <div className="row">
+        <div className="col-12">
+          <div className="card bg-dark">
+            {/* <div className="card-header bg-primary text-white">
+              <h3 className="card-title">List Of Universities</h3>
+            </div> */}
+            <div className="card-body">
+              <div className="table-responsive ">
+                <table className="table">
+                  <thead className='text-white'>
+                    <tr>
+                      <th>Schools</th>
+                      <th>Location</th>
+                      <th>Tuition</th>
+                      <th>Acceptance Rate</th>
+                      <th>Rating</th>
+                    </tr>
+                  </thead>
+                  <tbody className='text-white'>
+                    {universities.map(university => (
+                      <tr key={university.id}>
+                        <td >{university.name}</td>
+                        <td>{university.location}</td>
+                        <td>{university.tuition_fee}</td>
+                        <td>{university.acceptance_rate}</td>
+                        <td>{university.rating}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
-      ))}
-    </>
+      </div>
+    </div>
   );
 };
 
-export default UniversityListList;
+export default UniversityListTable;

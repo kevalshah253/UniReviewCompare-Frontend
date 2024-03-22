@@ -3,6 +3,7 @@ import { Box, Divider, Grid, Pagination } from '@mui/material';
 import UniversityListCard from './universityListCard';
 import fakeUniData from '../data/fakeUni';
 import Filter from './filter';
+import UniversityListTable from './universityListList';
 
 const UniversityList = () => {
   const itemsPerPage = 9;
@@ -65,18 +66,7 @@ const UniversityList = () => {
             {isGridView ? (
               <UniversityListCard />
             ) : (
-              <div className="products-area-wrapper tableView">
-                <div className="products-header">
-                  <div className="product-cell image">Schools</div>
-                  <div className="product-cell category">Location</div>
-                  <div className="product-cell status-cell">Tuition</div>
-                  <div className="product-cell sales">Acceptance Rate</div>
-                  <div className="product-cell price">Rating</div>
-                </div>
-                <div className="products-content">
-                  {/* Render your list view content here */}
-                </div>
-              </div>
+              <UniversityListTable/>
             )}
           </div>
         </div>
