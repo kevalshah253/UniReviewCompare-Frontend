@@ -56,7 +56,7 @@ const Login = () => {
             <div className="blur-overlay"></div>
             <HomePage />
 
-            <div className="login-container">
+            <div className="login-container mt-5">
                 <section className="bg-login text-light p-5">
                     <div className="container">
                         <h1 className="text-light">Log In</h1>
@@ -73,7 +73,7 @@ const Login = () => {
                                     <input ref={userPassword} type="password" className="form-control" name="password" aria-label="password" />
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-success">Submit</button>
+                            <button type="submit" className="btn btn-success text-white">Submit</button>
                         </form>
                     </div>
                 </section>

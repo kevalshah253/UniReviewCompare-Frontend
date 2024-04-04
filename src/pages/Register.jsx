@@ -54,7 +54,7 @@ const handlleSignupClick = async (e) => {
         <>
             <div className='blur-overlay'></div>
             <HomePage />
-            <div className='reg-container'>
+            <div className='reg-container mt-5'>
                 <section className="bg-reg text-light p-5">
                     <div className="container">
                         <h1 className="text-light">Create an Account</h1>
@@ -89,7 +89,7 @@ const handlleSignupClick = async (e) => {
                                     <input type="password" className="form-control" id="repassword" aria-label="confirm password" value={formData.repassword} onChange={handleInputChange} />
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-success">Submit</button>
+                            <button type="submit" className="btn btn-success text-white">Submit</button>
                         </form>
                     </div>
                 </section>

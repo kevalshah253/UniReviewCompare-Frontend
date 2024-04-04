@@ -173,7 +173,7 @@ const QuestionCards = () => {
 
   return (
     <>
-      <div className="container mt-3">
+      <div className="container mt-5">
         <div className="row justify-content-center mb-3">
           <div className="col-lg-6">
             <div className="input-group">
