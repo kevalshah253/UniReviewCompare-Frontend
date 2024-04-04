@@ -36,7 +36,7 @@ function Profile() {
     // }, []);
 
     return (
-        <div className="container">
+        <div className="container mt-3">
 		<div className="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
 			<form action=""  method="POST">	
 				<h3 className="text-center">Edit Personal Information</h3>

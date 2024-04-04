@@ -5,6 +5,7 @@ import UniversityList from '../components/universityList';
 import Profile from './Profile';
 import { ThemeProvider, createTheme } from '@mui/material';
 import RateAndReview from './RateAndReview';
+import QuestionCards from '../components/Questions';
 
 
 const Dashboard = () => {
@@ -20,11 +21,11 @@ const Dashboard = () => {
     switch (activeItem) {
       case 'Universities':
         return <UniversityList />;
-      case 'Review':
-        return <Review />;
+      case 'Rate and Review':
+        return <QuestionCards/>;
       case 'Compare':
         return <RateAndReview />;
-      case 'AboutUs':
+      case 'Rate and Review':
         return <ThemeProvider theme={theme}><Profile /></ThemeProvider>;
       case 'Profile':
         return <Profile />;
