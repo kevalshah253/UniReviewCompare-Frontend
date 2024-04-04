@@ -289,15 +289,15 @@ const QuestionCards = () => {
             </div>
 
             <div className="row justify-content-center mb-3">
-              <div className="col-lg-6">
+              <div className="col-lg-8">
                 <div className="mb-3">
-                  <label htmlFor="reviewInput" className="form-label">
-                    {t("CompanyPage.review.label")}
+                  <label htmlFor="reviewInput" className="form-label text-white">
+                    {t("Share your thoughts on this school")}
                   </label>
                   <textarea
                     className="form-control"
                     id="reviewInput"
-                    rows="3"
+                    rows="5"
                     value={review}
                     onChange={(e) => setReview(e.target.value)}
                   ></textarea>
