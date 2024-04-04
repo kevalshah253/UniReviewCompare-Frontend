@@ -127,7 +127,6 @@
 // }
 
 // export default QuestionCards;
-
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import sampleQuestions from "../data/sampleQuestions";
@@ -138,6 +137,7 @@ import { useTranslation } from "react-i18next";
 const QuestionCards = (props) => {
   const [value, setValue] = useState([]);
   const [comp, setComp] = useState({});
+  const [review, setReview] = useState("");
   const params = useParams();
   const { t } = useTranslation([]);
 
@@ -160,7 +160,8 @@ const QuestionCards = (props) => {
         oy_2: array[1].rate,
         oy_3: array[2].rate,
         oy_4: array[3].rate,
-        oy_5: array[4].rate
+        oy_5: array[4].rate,
+        review: review
       }
       // Simulating post request, replace it with actual logic
       console.log(obj); // Log the object to check if data is correct
@@ -206,6 +207,7 @@ const QuestionCards = (props) => {
                                 setValue([...value, { id: index, rate: i + 1 }]);
                               }
                             }}
+                            style={{ cursor: "pointer" }}
                           >
                             &#9733;
                           </span>
@@ -217,6 +219,23 @@ const QuestionCards = (props) => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="row justify-content-center mb-3">
+          <div className="col-lg-6">
+            <div className="mb-3">
+              <label htmlFor="reviewInput" className="form-label">
+                {t("CompanyPage.review.label")}
+              </label>
+              <textarea
+                className="form-control"
+                id="reviewInput"
+                rows="3"
+                value={review}
+                onChange={(e) => setReview(e.target.value)}
+              ></textarea>
+            </div>
+          </div>
         </div>
 
         <div className="row justify-content-center mb-3">
@@ -240,7 +259,7 @@ const QuestionCards = (props) => {
                   color: "#fff"
                 }}
               >
-                {t("CompanyPage.button.text")}
+                {t("Submit Review")}
               </button>
             </motion.div>
           </div>
