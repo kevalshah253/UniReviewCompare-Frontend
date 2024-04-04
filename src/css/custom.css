@@ -2439,6 +2439,31 @@ textarea.form-control-lg {
   transform-origin: 0 0;
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
+
+.about-card {
+  background-color: #7b5353; 
+  border-radius: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Removed the forward slash */
+}
+
+.about-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.card-title {
+  color: #1976D2; 
+  font-size: 1.5rem; 
+  margin-bottom: 10px; 
+}
+
+.card-text {
+  text-align: justify;
+  color: #555; 
+}
+
+
 @media (prefers-reduced-motion: reduce) {
   .form-floating > label {
     transition: none;

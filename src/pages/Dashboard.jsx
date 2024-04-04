@@ -6,6 +6,7 @@ import Profile from './Profile';
 import { ThemeProvider, createTheme } from '@mui/material';
 import RateAndReview from './RateAndReview';
 import QuestionCards from '../components/Questions';
+import About from './About';
 
 
 const Dashboard = () => {
@@ -29,6 +30,8 @@ const Dashboard = () => {
         return <ThemeProvider theme={theme}><Profile /></ThemeProvider>;
       case 'Profile':
         return <Profile />;
+        case 'About Us':
+          return <About />;
       default:
         return null;
     }
