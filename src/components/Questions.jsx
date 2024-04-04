@@ -211,6 +211,24 @@ const QuestionCards = () => {
 
         {selectedUniversity && (
           <div>
+            <div className="row justify-content-center mb-3">
+              <div className="col-lg-8">
+                <div className="card">
+                  <div className="card-header">
+                    <h5 className="card-title">
+                      <img
+                        src={selectedUniversity.img}
+                        alt={selectedUniversity.university}
+                        className="me-3"
+                        style={{ width: "60px", height: "60px" }}
+                      />
+                      {selectedUniversity.university}
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="row justify-content-center">
               {sampleQuestions.map((question, index) => (
                 <div
@@ -219,12 +237,12 @@ const QuestionCards = () => {
                 >
                   <div
                     className="card"
-                    style={{ backgroundColor: "#eef3f4", borderRadius: "15px" }}
+                    style={{ backgroundColor: "#eef3f4", borderRadius: "15px", padding:'8px' }}
                   >
                     <div className="row g-0">
                       <div className="col-md-4">
                         <img
-                          src={question.img}
+                          src={selectedUniversity.img}
                           alt="University Logo"
                           className="img-fluid rounded-start"
                           style={{
@@ -334,8 +352,26 @@ const QuestionCards = () => {
           </div>
         )}
       </div>
-    </>
-  );
-};
 
+      <style>
+        {`
+          .star {
+            color: #ccc;
+            font-size: 2rem;
+            cursor: pointer;
+          }
+
+          .star.filled {
+            color: #ffc107;
+          }
+
+          .star:hover {
+            color: #107;
+        }
+        `}
+        </style>
+        </>
+        );
+    };
+        
 export default QuestionCards;
