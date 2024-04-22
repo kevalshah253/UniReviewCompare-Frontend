@@ -73,7 +73,7 @@ const UniversityList = () => {
         <Grid container justifyContent="center" style={{ marginBottom: 20 }}>
           <Grid item>
             <Divider />
-            <Box component="span">
+            {/* <Box component="span">
               <Pagination
                 count={numberOfPages}
                 page={page}
@@ -84,7 +84,7 @@ const UniversityList = () => {
                 showFirstButton
                 showLastButton
               />
-            </Box>
+            </Box> */}
           </Grid>
         </Grid>
       </div>
